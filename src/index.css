@@ -99,3 +99,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Добавляем новые анимации для атаки капибары */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+}
+
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-flash {
+  animation: flash 0.5s linear infinite;
+}
+
+/* Улучшенная анимация ping для атаки */
+@keyframes attackPing {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-ping {
+  animation: attackPing 0.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
